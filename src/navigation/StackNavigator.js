@@ -18,8 +18,16 @@ const screenOptionStyle = {
 const MainStackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptionStyle}>
-            <Stack.Screen name="Anasayfa" component={Home} />
-            <Stack.Screen name="Hakkımda" component={About} />
+            <Stack.Screen
+                name="Anasayfa"
+                component={Home}
+                options={{headerLeft: (props) => null }}
+            />
+            <Stack.Screen
+                name="Hakkımda"
+                component={About}
+                options={{headerLeft: (props) => null }}
+            />
         </Stack.Navigator>
     );
 }
